@@ -32,6 +32,4 @@ resource "aws_instance" "web_server" {
     volume_size = 30
   }
 
-  user_data = file("${path.module}/user-data.sh")
-
 }
