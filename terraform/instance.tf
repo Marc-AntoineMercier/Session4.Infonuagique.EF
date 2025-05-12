@@ -28,6 +28,10 @@ resource "aws_instance" "web_server" {
     Name = "ep_instance"
   }
 
+  root_block_device {
+    volume_size = 30
+  }
+
   user_data = file("${path.module}/user-data.sh")
 
 }
