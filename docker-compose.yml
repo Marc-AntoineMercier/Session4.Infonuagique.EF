@@ -13,8 +13,8 @@ services:
     networks:
       - cloud
     # Redirige les ports hôte vers le conteneur
-    ports:
-      - 9000:9000
+    # ports:
+    #   - 9000:9000
     # Monte des répertoires ou fichiers dans le conteneur
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -59,8 +59,8 @@ services:
     # Démarre après la base de données
     depends_on:
       - nextclouddb
-    ports:
-      - 8081:80
+    # ports:
+    #   - 8081:80
     volumes:
       - /local/nextcloud:/var/www/html
     environment:
@@ -82,8 +82,8 @@ services:
     restart: unless-stopped
     networks:
       - cloud
-    ports:
-      - 8096:8096
+    # ports:
+    #   - 8096:8096
     environment:
       - TZ=America/Montreal
     volumes:
