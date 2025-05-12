@@ -1,13 +1,13 @@
 resource "aws_security_group" "https_access" {
-  name        = "ssh-access"
-  description = "Allow SSH inbound traffic"
+  name        = "HTTPS"
+  description = "Allow all tcp"
   vpc_id      = aws_vpc.epreuve_final.id
 
   ingress {
 
-    description = "SSH"
-    from_port   = "22"
-    to_port     = "22"
+    description = "HTTPS"
+    from_port   = 0
+    to_port     = 0
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
