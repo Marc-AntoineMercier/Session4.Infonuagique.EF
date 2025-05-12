@@ -25,3 +25,21 @@ variable "azs" {
   description = "Availability Zones"
   default     = ["us-east-1a"]
 }
+
+variable "internet_gateway" {
+    type = string
+    description = "Nom de la passerel internet"
+    default = "epreuve-final-igw"
+}
+
+variable "public_route_table" {
+    type = string
+    description = "Nom de la table public pour le routage"
+    default = "ep_public_route_table"
+}
+
+variable "private_route_table" {
+  type = string
+  description = "Nom de la table priver pour le routage"
+  default = "ep_private_route_table"
+}
